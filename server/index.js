@@ -10,6 +10,10 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 app.use('/api/counters', counterRoutes);
+app.use('/', (req, res) => {
+    console.log("Server is Running...app.use.");
+
+})
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('🗄️ MongoDB connected'))
