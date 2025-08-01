@@ -7,11 +7,12 @@
 
 <p align="center">
   <a href="https://client-gold-psi.vercel.app/">
-    <img src="https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/client/main/public/logo.png" alt="BlogSphere Logo" width="150"/>
+    <img src="https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/main/assets/logo.png" alt="View Counter Logo" width="150"/>
   </a>
 </p>
 
-![BlogSpher Preview](https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/client/main/public/image.png)
+![Preview](https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/main/assets/image.png)
+
 
 > **Add real-time view counters to your GitHub profile with your own analytics dashboard!**
 
