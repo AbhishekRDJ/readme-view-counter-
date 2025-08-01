@@ -3,6 +3,14 @@
 # Deployed Software: 
 ## https://client-gold-psi.vercel.app/
 
+<p align="center">
+  <a href="https://client-gold-psi.vercel.app/">
+    <img src="https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/client/main/public/logo.png" alt="BlogSphere Logo" width="150"/>
+  </a>
+</p>
+
+![BlogSpher Preview](https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/client/main/public/image.png)
+
 > **Add real-time view counters to your GitHub profile with your own analytics dashboard!**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
