@@ -3,6 +3,8 @@
 # Deployed Software: 
 ## https://client-gold-psi.vercel.app/
 
+## This Repository got Total Views : [![Profile Views](https://readme-view-counter.onrender.com/api/counters/7a09f175/badge)](https://github.com/your-username)
+
 <p align="center">
   <a href="https://client-gold-psi.vercel.app/">
     <img src="https://raw.githubusercontent.com/AbhishekRDJ/readme-view-counter-/client/main/public/logo.png" alt="BlogSphere Logo" width="150"/>
