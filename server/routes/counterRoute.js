@@ -27,27 +27,36 @@ router.get('/:slug/visit', async (req, res) => {
 });
 
 router.get('/:slug/badge', async (req, res) => {
-
     const c = await Counter.findOneAndUpdate(
         { slug: req.params.slug },
         { $inc: { count: 1 } },
         { new: true }
     );
+
     if (!c) return res.status(404).send('Not found');
 
+    const label = req.query.label || 'views';
+    const color = req.query.color || 'blue';
+    const style = req.query.style || 'flat-square';
 
     const svg = makeBadge({
-        label: 'views',
+        label,
         message: String(c.count),
-        color: 'blue',
-        style: 'flat-square'
+        color,
+        style
     });
 
     res.setHeader('Content-Type', 'image/svg+xml;charset=utf-8');
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+
+    // Prevent all caching
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+    res.setHeader('Surrogate-Control', 'no-store');
 
     res.send(svg);
 });
+
 
 
 export default router;

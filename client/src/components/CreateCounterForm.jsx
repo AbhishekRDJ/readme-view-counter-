@@ -43,7 +43,7 @@ export default function CreateCounterForm() {
     };
 
     return (
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-4 min-h-screen">
+        <div className="bg-gradient-to-br from-[#00809D] to-[#D3AF37] p-4 min-h-screen">
             <div className="mx-auto max-w-2xl">
                 {/* Header */}
                 <div className="mb-8 text-center">
@@ -176,7 +176,7 @@ export default function CreateCounterForm() {
                     </div>
                 )}
 
-                <div className="mt-8 text-gray-500 text-sm text-center">
+                <div className="mt-8 text-white text-sm text-center">
                     <p>Copy the badge URL and paste it into your README.md file or anywhere you like</p>
                 </div>
             </div>
