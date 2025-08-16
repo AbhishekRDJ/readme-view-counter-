@@ -8,13 +8,23 @@ import { makeBadge, ValidationError } from 'badge-maker'
 router.post('/', async (req, res) => {
     const { url, initialCounter = 0 } = req.body;
     const slug = uuidv4().slice(0, 8);
+
     const counter = new Counter({ url, count: initialCounter, slug });
     await counter.save();
-    res.status(201).json({
-        slug, badgeMarkdown: `[![Profile Views](${process.env.BASE_URL}/api/counters/${slug}/badge)](${url})`
 
-    })
-})
+    const badgeUrl = `${process.env.BASE_URL}/api/counters/${slug}/badge?label=Total%20Views&color=0e75b6&style=for-the-badge&cache_bust=${Date.now()}`;
+
+    const htmlSnippet = `<a href="${url}">
+  <img src="${badgeUrl}" alt="Total Views Badge">
+</a>`;
+
+    res.status(201).json({
+        slug,
+        badgeUrl,
+        htmlSnippet
+    });
+});
+
 
 router.get('/:slug/visit', async (req, res) => {
     const c = await Counter.findOneAndUpdate(
